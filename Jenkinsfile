@@ -1,5 +1,8 @@
 pipeline {
     agent {
+    environment { 
+        Course = 'clang'
+    }
      node {
 
         label 'Agent-1'
@@ -10,7 +13,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                   sh """
+                      echo "hello build"
+                      env
+                      """
+
+
             }
         }
         stage('Test') {
