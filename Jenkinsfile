@@ -9,6 +9,7 @@ pipeline {
 environment { 
         Course = 'clang'
     }
+    
 //build///
     stages {
         stage('Build') {
