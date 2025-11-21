@@ -1,14 +1,14 @@
 pipeline {
     agent {
-    environment { 
-        Course = 'clang'
-    }
+    
      node {
 
         label 'Agent-1'
      }
     }
-
+environment { 
+        Course = 'clang'
+    }
 //build///
     stages {
         stage('Build') {
